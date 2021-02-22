@@ -8,12 +8,14 @@ let menuToggle = false;
 
 menuImg.addEventListener('click', (e) => {
   menuToggle = true;
+  mobMenu.style.position = 'absolute';
   mobMenu.style.transition = '1s ease';
-  mobMenu.style.marginRight = '50%';
+  mobMenu.style.marginRight = '0%';
 })
 
 mobNavCloser.addEventListener('click', (e) => {
   menuToggle = false;
+  mobMenu.style.position = 'absolute';
   mobMenu.style.transition = '1s ease';
   mobMenu.style.marginRight = '-50%';
 })
@@ -38,9 +40,13 @@ else {
 }
 
 function inviteBot() {
-  location.replace("https://discord.com/oauth2/authorize?client_id=716257964767445043&scope=bot&permissions=8")
+  window.open("https://discord.com/oauth2/authorize?client_id=716257964767445043&scope=bot&permissions=8")
 }
 
 function voteBot() {
-  location.replace("https://top.gg/bot/716257964767445043/vote")
+  window.open("https://top.gg/bot/716257964767445043/vote")
+}
+
+function joinServer() {
+  window.open("https://discord.gg/QfGMT3zphK")
 }

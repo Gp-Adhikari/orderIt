@@ -7,8 +7,11 @@
   font-family: 'Montserrat', sans-serif;
 }
 
-body {
+body, html {
+  position: relative;
   overflow: hidden;
+  height: 100vh;
+  width: 100%;
   background: #1A1A1A;
   color: white;
 }
@@ -43,18 +46,35 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .section-1 header ul li {
   margin-left: 2.5rem;
   cursor: pointer;
+  padding: .5rem 0;
   border-bottom: 1px solid transparent;
   -webkit-transition: .5s ease;
   transition: .5s ease;
 }
 
-.section-1 header ul li:nth-last-child(0) {
-  margin-left: 0;
+.section-1 header ul li:nth-last-child(1) {
+  background: #f1f1f1;
+  color: #000000;
+  border: 1px solid transparent;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.section-1 header ul li:nth-last-child(1):hover {
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+  border-bottom: 1px solid transparent;
+  background: transparent;
+  border: 1px solid white;
+  color: white;
 }
 
 .section-1 header ul li:hover {
@@ -84,6 +104,13 @@ body {
           backdrop-filter: blur(5px);
   top: 0;
   text-align: center;
+}
+
+.section-1 .mob-nav .mob-menu .mob-join-server {
+  border-bottom: 0px;
+  margin-top: 1rem;
+  background: white;
+  color: black;
 }
 
 .section-1 .mob-nav .mob-menu li {
